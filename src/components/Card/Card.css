@@ -15,8 +15,9 @@
   position: relative;
 }
 .card__content {
-  background: url(../../imgs/background_default.svg) center no-repeat;
-  background-size: cover;
+  background-image: url(../../imgs/cat.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
   height: 480px;
   width: 100%;
   display: -webkit-box;
@@ -30,22 +31,53 @@
           justify-content: center;
   cursor: pointer;
 }
-.card__content:hover {
-  background: url(../../imgs/background_default_hover.svg) center no-repeat;
-  background-size: cover;
+.card__content::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-image: url(../../imgs/default.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 1;
 }
-.card__content_selected {
-  background: url(../../imgs/background_selected.svg) center no-repeat;
-  background-size: cover;
+.card__content:hover::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-image: url(../../imgs/default_hover.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 1;
 }
-.card__content_selected:hover {
-  background: url(../../imgs/background_selected_hover.svg) center no-repeat;
-  background-size: cover;
+.card__content_selected::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-image: url(../../imgs/selected.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+.card__content_selected:hover::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-image: url(../../imgs/selected_hover.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 1;
 }
 .card__content_disabled {
   background: url(../../imgs/background_disabled.svg) center no-repeat;
-  background-size: cover;
+  background-size: contain;
   pointer-events: none;
+}
+.card__content_disabled::after {
+  background-image: none;
 }
 .card__title {
   margin-top: 20px;
@@ -71,6 +103,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  z-index: 2;
 }
 .card__weight_first {
   right: 27px;
@@ -89,7 +122,7 @@
 }
 @media screen and (min-width: 920px) and (max-width: 1100px) {
   .card {
-    width: 266px;
+    width: 267px;
     height: 430px;
   }
   .card__title {
