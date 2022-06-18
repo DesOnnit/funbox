@@ -2,7 +2,8 @@
   font-family: "TrebuchetMS";
   background: #000;
   width: 100%;
-  height: 100vh;
+  height: 100%;
+  min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -57,6 +58,10 @@
           justify-content: space-between;
 }
 @media screen and (min-width: 920px) and (max-width: 1100px) {
+  .App h1 {
+    font-size: 40px;
+    line-height: 48px;
+  }
   .App h2 {
     font-size: 28px;
     line-height: 22px;
@@ -85,13 +90,12 @@
     justify-items: center;
     -ms-grid-columns: (1fr)[2];
     grid-template-columns: repeat(2, 1fr);
-    row-gap: 50px;
+    row-gap: 20px;
   }
 }
 @media screen and (min-width: 320px) and (max-width: 539px) {
   .App {
-    height: 100%;
-    padding-bottom: 100px;
+    padding-bottom: 50px;
     padding-top: 50px;
   }
   .App__container {
@@ -99,6 +103,12 @@
     display: grid;
     grid-auto-columns: 1fr;
     justify-items: center;
-    row-gap: 50px;
+    row-gap: 20px;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 350px) {
+  .App h2 {
+    font-size: 38px;
+    line-height: 26px;
   }
 }
