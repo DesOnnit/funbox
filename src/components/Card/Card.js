@@ -6,6 +6,7 @@ export default function Card(props) {
     const [disabled] = useState(props.item.disabled)
     function handleClick() {
         setSelected(!selected)
+        setHover(false)
     }
     function statusCheck() {
         if (selected) {
