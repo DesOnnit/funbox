@@ -5,7 +5,7 @@ ___
 ## Инструкция по установке: 
 
 ```
-git clone https://github.com/DesOnnit/test-app
+git clone https://github.com/DesOnnit/funbox
 npm npm install
 npm run start
 ```
