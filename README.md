@@ -6,7 +6,7 @@ ___
 
 ```
 git clone https://github.com/DesOnnit/funbox
-npm npm install
+npm install
 npm run start
 ```
 ___
