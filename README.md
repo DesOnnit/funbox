@@ -1,4 +1,3 @@
-## [Данная работа](http://vadkor3z.beget.tech/) - тестовое задание на должность frontend-разработчика
 ___
 ## [Макет в Figma](https://www.figma.com/file/uEnAfwBQOSB1TBejd62WVK/prototype)
 ___
